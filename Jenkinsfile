@@ -160,7 +160,11 @@ pipeline {
 
                         echo "=== SonarQube Analysis ==="
 
-                        sonar-scanner
+                        # Menimpa project key secara dinamis agar sesuai Next.js 
+                        # tanpa mengubah isi file asli sonar-project.properties
+                        sonar-scanner \
+                            -Dsonar.projectKey=ifs24036-pabwe2026-nextjs \
+                            -Dsonar.projectName=ifs24036-pabwe2026-nextjs
 
                         echo "=== SonarQube Analysis Completed ==="
                     '''
