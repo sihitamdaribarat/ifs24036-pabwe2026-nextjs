@@ -130,7 +130,7 @@ export function HomePage() {
             className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
               activeTab === "all"
                 ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
-                : "text-slate-400 hover:text-white"
+                : "text-slate-300 hover:text-white"
             }`}
           >
             Semua Postingan
@@ -141,7 +141,7 @@ export function HomePage() {
             className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
               activeTab === "my_posts"
                 ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
-                : "text-slate-400 hover:text-white"
+                : "text-slate-300 hover:text-white"
             }`}
           >
             Postingan Saya
@@ -234,7 +234,7 @@ export function HomePage() {
                         <p className="text-sm font-semibold text-white leading-tight">
                           {post.author?.name || "Pengguna"}
                         </p>
-                        <span className="flex items-center gap-1 text-[11px] text-slate-400 mt-0.5">
+                        <span className="flex items-center gap-1 text-[11px] text-slate-300 mt-0.5">
                           <IconCalendar className="w-3 h-3" />
                           {formatDate(post.created_at)}
                         </span>
@@ -250,14 +250,14 @@ export function HomePage() {
 
                 {/* Footer Interactions */}
                 <div className="px-5 py-3.5 bg-slate-900/90 border-t border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-xs font-medium text-slate-400">
+                  <div className="flex items-center gap-4 text-xs font-medium text-slate-300">
                     <button
                       type="button"
                       onClick={(e) => handleLike(e, post.id, isLiked)}
                       className={`flex items-center gap-1.5 transition ${
                         isLiked
                           ? "text-red-500 hover:text-red-400 font-bold"
-                          : "hover:text-red-400"
+                          : "text-slate-300 hover:text-red-400"
                       }`}
                       aria-label="Suka Postingan"
                     >
@@ -267,7 +267,7 @@ export function HomePage() {
                       <span>{likesCount}</span>
                     </button>
 
-                    <div className="flex items-center gap-1.5 text-slate-400">
+                    <div className="flex items-center gap-1.5 text-slate-300">
                       <IconMessageCircle className="w-4 h-4" />
                       <span>{commentsCount}</span>
                     </div>

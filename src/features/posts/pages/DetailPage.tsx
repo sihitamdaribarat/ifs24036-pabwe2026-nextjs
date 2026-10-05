@@ -229,7 +229,7 @@ export function DetailPage({ postId }: DetailPageProps) {
                 <h2 className="text-base font-bold text-white">
                   {post.author?.name || "Pengguna Delcom"}
                 </h2>
-                <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-0.5">
+                <div className="flex items-center gap-1.5 text-xs text-slate-300 mt-0.5">
                   <IconCalendar className="w-3.5 h-3.5" />
                   <span>Diterbitkan {formatDate(post.created_at)}</span>
                 </div>
@@ -322,7 +322,7 @@ export function DetailPage({ postId }: DetailPageProps) {
         {/* Comments List */}
         <div className="space-y-4 pt-2">
           {commentsList.length === 0 && !post.my_comment ? (
-            <p className="text-sm text-slate-400 text-center py-6">
+            <p className="text-sm text-slate-300 text-center py-6">
               Belum ada komentar. Jadilah yang pertama memberikan respon!
             </p>
           ) : (

@@ -88,7 +88,7 @@ export function SidebarComponent({ isOpen, onClose }: SidebarComponentProps) {
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition ${
                     item.active
                       ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/30"
-                      : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/80"
+                      : "text-slate-300 hover:text-white hover:bg-slate-800/80"
                   }`}
                 >
                   <Icon className="w-5 h-5 shrink-0" />
@@ -99,8 +99,8 @@ export function SidebarComponent({ isOpen, onClose }: SidebarComponentProps) {
           </nav>
         </div>
 
-        <footer className="pt-4 border-t border-slate-800 text-xs text-slate-400">
-          <p className="font-medium text-slate-400">Delcom Open API</p>
+        <footer className="pt-4 border-t border-slate-800 text-xs text-slate-300">
+          <p className="font-medium text-slate-300">Delcom Open API</p>
           <p className="mt-0.5">&copy; 2026 Gideon Panjaitan</p>
         </footer>
       </aside>
