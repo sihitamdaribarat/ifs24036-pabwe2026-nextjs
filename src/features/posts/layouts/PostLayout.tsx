@@ -41,7 +41,7 @@ export function PostLayout({ children }: PostLayoutProps) {
         aria-label="Memuat"
       >
         <div className="flex flex-col items-center gap-3">
-          <div role="status" aria-label="Memverifikasi sesi..." className="animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
+          <output aria-label="Memverifikasi sesi..." className="block animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></output>
           <span className="text-xs text-slate-400">Memverifikasi sesi...</span>
         </div>
       </main>

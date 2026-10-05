@@ -29,7 +29,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
         className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900"
         aria-label="Memuat"
       >
-        <div role="status" aria-label="Memuat..." className="animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
+        <output aria-label="Memuat..." className="block animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></output>
       </main>
     );
   }
