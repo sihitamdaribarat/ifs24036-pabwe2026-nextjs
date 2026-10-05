@@ -322,7 +322,7 @@ export function DetailPage({ postId }: DetailPageProps) {
         {/* Comments List */}
         <div className="space-y-4 pt-2">
           {commentsList.length === 0 && !post.my_comment ? (
-            <p className="text-sm text-slate-500 text-center py-6">
+            <p className="text-sm text-slate-400 text-center py-6">
               Belum ada komentar. Jadilah yang pertama memberikan respon!
             </p>
           ) : (
@@ -335,7 +335,7 @@ export function DetailPage({ postId }: DetailPageProps) {
                   <p className="text-sm text-slate-200 leading-relaxed">
                     {c.comment}
                   </p>
-                  <span className="text-[11px] text-slate-500">
+                  <span className="text-[11px] text-slate-400">
                     {formatDate(c.created_at)}
                   </span>
                 </div>

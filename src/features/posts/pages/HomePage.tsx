@@ -234,7 +234,7 @@ export function HomePage() {
                         <p className="text-sm font-semibold text-white leading-tight">
                           {post.author?.name || "Pengguna"}
                         </p>
-                        <span className="flex items-center gap-1 text-[11px] text-slate-500 mt-0.5">
+                        <span className="flex items-center gap-1 text-[11px] text-slate-400 mt-0.5">
                           <IconCalendar className="w-3 h-3" />
                           {formatDate(post.created_at)}
                         </span>

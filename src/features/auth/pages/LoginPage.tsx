@@ -44,7 +44,7 @@ export function LoginPage() {
   };
 
   return (
-    <div className="w-full space-y-8">
+    <section aria-label="Form Login" className="w-full space-y-8">
       <div>
         <h2 className="text-3xl font-extrabold tracking-tight text-white">
           Selamat Datang Kembali
@@ -64,7 +64,7 @@ export function LoginPage() {
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <IconMail className="w-5 h-5" />
+              <IconMail className="w-5 h-5" aria-hidden="true" />
             </div>
             <input
               id="login-email-input"
@@ -90,7 +90,7 @@ export function LoginPage() {
           </div>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <IconLock className="w-5 h-5" />
+              <IconLock className="w-5 h-5" aria-hidden="true" />
             </div>
             <input
               id="login-password-input"
@@ -116,7 +116,7 @@ export function LoginPage() {
           ) : (
             <>
               <span>Masuk Sekarang</span>
-              <IconArrowRight className="w-4 h-4" />
+              <IconArrowRight className="w-4 h-4" aria-hidden="true" />
             </>
           )}
         </button>
@@ -131,7 +131,7 @@ export function LoginPage() {
           Daftar akun baru
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 

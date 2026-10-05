@@ -96,7 +96,7 @@ export function ChangeCoverModal({
                 className="w-full h-full object-cover"
               />
             ) : (
-              <div className="flex flex-col items-center gap-2 text-slate-500">
+              <div className="flex flex-col items-center gap-2 text-slate-400">
                 <IconPhoto className="w-10 h-10 stroke-1" />
                 <span className="text-xs">Belum ada cover dipilih</span>
               </div>

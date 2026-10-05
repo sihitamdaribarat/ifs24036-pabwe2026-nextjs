@@ -65,7 +65,7 @@ export function UsersPage() {
           <h3 className="text-base font-semibold text-slate-300">
             Tidak ada pengguna ditemukan
           </h3>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-sm text-slate-400 mt-1">
             {searchTerm
               ? `Tidak ada hasil pencarian untuk "${searchTerm}"`
               : "Belum ada pengguna terdaftar"}
@@ -101,7 +101,7 @@ export function UsersPage() {
                 </div>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-500">
+              <div className="mt-5 pt-3 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400">
                 <span className="flex items-center gap-1">
                   <IconCalendar className="w-3.5 h-3.5" />
                   Bergabung {formatDate(user.created_at)}

@@ -24,25 +24,29 @@ export function AuthLayout({ children }: AuthLayoutProps) {
 
   if (checkingAuth) {
     return (
-      <div
+      <main
         data-testid="auth-loading"
         className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900"
+        aria-label="Memuat"
       >
-        <div className="animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
-      </div>
+        <div role="status" aria-label="Memuat..." className="animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
+      </main>
     );
   }
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-slate-900 text-slate-100">
       {/* Visual Banner */}
-      <div className="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-indigo-900 via-slate-900 to-purple-950 border-b lg:border-b-0 lg:border-r border-slate-800">
+      <aside
+        aria-label="Informasi Aplikasi"
+        className="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-indigo-900 via-slate-900 to-purple-950 border-b lg:border-b-0 lg:border-r border-slate-800"
+      >
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="relative z-10 flex items-center gap-3">
+        <header className="relative z-10 flex items-center gap-3">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/30">
-            <IconArticle className="w-7 h-7 text-white" />
+            <IconArticle className="w-7 h-7 text-white" aria-hidden="true" />
           </div>
           <div>
             <h1 className="text-xl font-bold tracking-tight text-white">
@@ -52,11 +56,11 @@ export function AuthLayout({ children }: AuthLayoutProps) {
               Community Platform
             </p>
           </div>
-        </div>
+        </header>
 
-        <div className="relative z-10 my-12 lg:my-0 space-y-4">
+        <section aria-label="Deskripsi Platform" className="relative z-10 my-12 lg:my-0 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold">
-            <IconSparkles className="w-3.5 h-3.5" />
+            <IconSparkles className="w-3.5 h-3.5" aria-hidden="true" />
             <span>PABWE 2026 Next.js Application</span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-extrabold text-white leading-tight">
@@ -66,18 +70,18 @@ export function AuthLayout({ children }: AuthLayoutProps) {
             Platform modern untuk berbagi ide, menyukai konten inspiratif, dan
             berdiskusi bersama ribuan anggota aktif Delcom.
           </p>
-        </div>
+        </section>
 
-        <div className="relative z-10 text-xs text-slate-500">
+        <footer className="relative z-10 text-xs text-slate-400">
           &copy; {new Date().getFullYear()} Delcom Open API Platform. All
           rights reserved.
-        </div>
-      </div>
+        </footer>
+      </aside>
 
       {/* Auth Content Card */}
-      <div className="lg:w-1/2 flex items-center justify-center p-6 sm:p-12 lg:p-16">
+      <main className="lg:w-1/2 flex items-center justify-center p-6 sm:p-12 lg:p-16">
         <div className="w-full max-w-md">{children}</div>
-      </div>
+      </main>
     </div>
   );
 }

@@ -35,15 +35,16 @@ export function PostLayout({ children }: PostLayoutProps) {
 
   if (isAuthenticated === null || !isAuthenticated) {
     return (
-      <div
+      <main
         data-testid="post-layout-loading"
         className="min-h-screen flex items-center justify-center bg-slate-950 text-slate-100"
+        aria-label="Memuat"
       >
         <div className="flex flex-col items-center gap-3">
-          <div className="animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
+          <div role="status" aria-label="Memverifikasi sesi..." className="animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
           <span className="text-xs text-slate-400">Memverifikasi sesi...</span>
         </div>
-      </div>
+      </main>
     );
   }
 

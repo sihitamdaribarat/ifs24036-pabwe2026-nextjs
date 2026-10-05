@@ -99,10 +99,10 @@ export function SidebarComponent({ isOpen, onClose }: SidebarComponentProps) {
           </nav>
         </div>
 
-        <div className="pt-4 border-t border-slate-800 text-xs text-slate-500">
+        <footer className="pt-4 border-t border-slate-800 text-xs text-slate-400">
           <p className="font-medium text-slate-400">Delcom Open API</p>
           <p className="mt-0.5">&copy; 2026 Gideon Panjaitan</p>
-        </div>
+        </footer>
       </aside>
     </>
   );

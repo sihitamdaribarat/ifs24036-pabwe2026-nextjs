@@ -65,7 +65,7 @@ export function RegisterPage() {
   };
 
   return (
-    <div className="w-full space-y-8">
+    <section aria-label="Form Registrasi" className="w-full space-y-8">
       <div>
         <h2 className="text-3xl font-extrabold tracking-tight text-white">
           Buat Akun Baru
@@ -85,7 +85,7 @@ export function RegisterPage() {
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <IconUser className="w-5 h-5" />
+              <IconUser className="w-5 h-5" aria-hidden="true" />
             </div>
             <input
               id="name"
@@ -108,7 +108,7 @@ export function RegisterPage() {
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <IconMail className="w-5 h-5" />
+              <IconMail className="w-5 h-5" aria-hidden="true" />
             </div>
             <input
               id="email"
@@ -132,7 +132,7 @@ export function RegisterPage() {
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <IconLock className="w-5 h-5" />
+              <IconLock className="w-5 h-5" aria-hidden="true" />
             </div>
             <input
               id="password"
@@ -155,7 +155,7 @@ export function RegisterPage() {
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <IconLock className="w-5 h-5" />
+              <IconLock className="w-5 h-5" aria-hidden="true" />
             </div>
             <input
               id="confirmPassword"
@@ -179,7 +179,7 @@ export function RegisterPage() {
           ) : (
             <>
               <span>Daftar Akun</span>
-              <IconArrowRight className="w-4 h-4" />
+              <IconArrowRight className="w-4 h-4" aria-hidden="true" />
             </>
           )}
         </button>
@@ -194,7 +194,7 @@ export function RegisterPage() {
           Masuk di sini
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 
