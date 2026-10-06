@@ -160,11 +160,7 @@ pipeline {
 
                         echo "=== SonarQube Analysis ==="
 
-                        # Menimpa project key secara dinamis agar sesuai Next.js 
-                        # tanpa mengubah isi file asli sonar-project.properties
-                        sonar-scanner \
-                            -Dsonar.projectKey=ifs24036-pabwe2026-nextjs \
-                            -Dsonar.projectName=ifs24036-pabwe2026-nextjs
+                        sonar-scanner
 
                         echo "=== SonarQube Analysis Completed ==="
                     '''
@@ -213,9 +209,12 @@ pipeline {
                         -x ".env" \
                         -x ".env.*" \
                         -x "coverage/*" \
+                        -x ".next/*" \
+                        -x "out/*" \
                         -x ".trivy-cache/*" \
                         -x "latest-app.zip" \
-                        -x "trivy-results.sarif"
+                        -x "trivy-results.sarif" \
+                        -x ".docs/*"
 
                     echo "=== Application Package Created ==="
 
